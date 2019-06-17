@@ -1,0 +1,805 @@
+/*** CSS Styles  ***/
+
+/* W3.CSS 4.04 Apr 2017 by Jan Egil and Borge Refsnes */
+html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}
+audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
+audio:not([controls]){display:none;height:0}[hidden],template{display:none}
+a{background-color:transparent;-webkit-text-decoration-skip:objects}
+a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
+dfn{font-style:italic}mark{background:#ff0;color:#000}
+small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sub{bottom:-0.25em}sup{top:-0.5em}figure{margin:1em 40px}img{border-style:none}svg:not(:root){overflow:hidden}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}hr{box-sizing:content-box;height:0;overflow:visible}
+button,input,select,textarea{font:inherit;margin:0}optgroup{font-weight:bold}
+button,input{overflow:visible}button,select{text-transform:none}
+button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner{border-style:none;padding:0}
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring{outline:1px dotted ButtonText}
+fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}
+legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}
+[type=checkbox],[type=radio]{padding:0}
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
+[type=search]{-webkit-appearance:textfield;outline-offset:-2px}
+[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+::-webkit-input-placeholder{color:inherit;opacity:0.54}
+::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+/* Début de la feuille de style */
+body {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	width: 100vw;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.vertical_align {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	text-align: center;
+	margin-right: 20px;
+}
+#james_transition {
+	height: 352px;
+	animation: rotationJames 3s infinite linear;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+@keyframes rotationJames {
+    0%   {transform: rotate(0deg);}
+    25%  {transform: rotate(2deg);}
+    50%  {transform: rotate(0deg);}
+    75%  {transform: rotate(-2deg);}
+    100% {transform: rotate(0deg);}
+}
+#music_player {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	cursor: pointer;
+	position: absolute;
+	border-radius: 25px;
+	box-shadow: 0px 0px 15px #1A1A1A;
+	background-color: white;
+	opacity: 0.7;
+	bottom: 99px;
+	right: 30px;
+	transition-duration: 0.3s;
+}
+#music_player:hover {
+	opacity: 1;
+	transition-duration: 0.3s;
+}
+#music_player i {
+	cursor: pointer;
+	color: black;
+	opacity: 1;
+	transition-duration: 0.3s;
+}
+#music_player i:hover {
+	opacity: 1;
+	transition-duration: 0.3s;
+}
+#hide_music_player {
+	display: none;
+}
+#play_icon {
+	display: none;
+}
+#link_to_game {
+	position: absolute;
+	top: 0;
+	right: 100px;
+	margin: 30px;
+	display: none;
+	transition-duration: 0.5s;
+}
+#link_to_game img {
+	height: 100px;
+	cursor: pointer;
+	position: absolute;
+	animation: rotationBell 4s infinite linear;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+#image_bell {
+	z-index: 999;
+}
+#image_bell2 {
+	z-index: 998;
+}
+@keyframes rotationBell {
+    0%   {transform: rotate(0deg);}
+    25%  {transform: rotate(30deg);}
+    50%  {transform: rotate(0deg);}
+    75%  {transform: rotate(-30deg);}
+    100% {transform: rotate(0deg);}
+}
+#wrapper_intro {
+	width: 100vw;
+	height: 100vh;
+	background-image: url(../images/background-intro.jpg);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size: cover;
+}
+#wrapper_intro {
+	width: 100vw;
+	height: 100vh;
+}
+#wrapper_level_1 {
+	width: 100vw;
+	height: 100vh;
+	background-image: url(../images/background-level-1.jpg);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size: cover;
+	display: block;
+}
+#wrapper_level_2 {
+	width: 100vw;
+	height: 100vh;
+	background-image: url(../images/background-level-2.png);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size: cover;
+	display: none;
+}
+#wrapper_level_3 {
+	width: 100vw;
+	height: 100vh;
+	background-image: url(../images/background-level-3.jpg);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size: cover;
+	display: none;
+}
+#wrapper_conclusion {
+	width: 100vw;
+	height: 100vh;
+	background-image: url(../images/background-conclusion.jpg);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size: cover;
+	display: none;
+}
+#intro_message_box {
+    overflow: hidden;
+    box-shadow: 0px 0px 15px #1A1A1A;
+    background-color: #fff;
+    border-radius: 20px;
+	border-bottom-left-radius: 0px;
+    width: 30vw;
+	position: absolute;
+	left: 35%;
+	bottom: 50%;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-family: 'Germania One', cursive;
+	font-size: 40px;
+	text-align: center;
+	opacity: 0.8;
+	cursor:pointer;
+	transition-duration: 0.5s;
+}
+#intro_message_box:hover {
+	opacity: 1;
+	transition-duration: 0.5s;
+}
+#james_message_box_level_1 {
+	position: absolute;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px #1A1A1A;
+    background-color: #fff;
+    border-radius: 20px;
+	border-bottom-left-radius: 0px;
+	width: 30vw;
+	left: 15%;
+	bottom: 50%;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-family: 'Germania One', cursive;
+	font-size: 40px;
+	text-align: center;
+	display: none;
+	padding-top: 0;
+	margin-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	transition-duration: 0.5s;
+	opacity: 0.8;
+	cursor: pointer;
+}
+#james_message_box_level_1:hover {
+	opacity: 1;
+	transition-duration: 0.5s;
+}
+#james_message_box_level_2 {
+	position: absolute;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px #1A1A1A;
+    background-color: #fff;
+    border-radius: 20px;
+	border-bottom-left-radius: 0px;
+	width: 30vw;
+	left: 15%;
+	bottom: 50%;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-family: 'Germania One', cursive;
+	font-size: 40px;
+	text-align: center;
+	display: none;
+	padding-top: 0;
+	margin-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	cursor: pointer;
+	transition-duration: 0.5s;
+	opacity: 0.8;
+}
+#james_message_box_level_2:hover {
+	opacity: 1;
+	transition-duration: 0.5s;
+}
+#james_message_box_level_3 {
+	position: absolute;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px #1A1A1A;
+    background-color: #fff;
+    border-radius: 20px;
+	border-bottom-left-radius: 0px;
+	width: 30vw;
+	left: 15%;
+	bottom: 50%;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-family: 'Germania One', cursive;
+	font-size: 40px;
+	text-align: center;
+	display: none;
+	padding-top: 0;
+	margin-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	cursor: pointer;
+	transition-duration: 0.5s;
+	opacity: 0.8;
+}
+#james_message_box_level_3:hover {
+	opacity: 1;
+	transition-duration: 0.5s;
+}
+#james_message_box_conclusion {
+	position: absolute;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px #1A1A1A;
+    background-color: #fff;
+    border-radius: 20px;
+	border-bottom-left-radius: 0px;
+	width: 30vw;
+	left: 15%;
+	bottom: 50%;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-family: 'Germania One', cursive;
+	font-size: 40px;
+	text-align: center;
+	display: none;
+	padding-top: 0;
+	margin-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	cursor: pointer;
+	transition-duration: 0.5s;
+	opacity: 0.8;
+}
+#james_message_box_conclusion:hover {
+	opacity: 1;
+	transition-duration: 0.5s;
+}
+#intro_message_arrow {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 5px;
+	font-size: 40px;
+	color: black;
+	cursor:pointer;
+}
+#intro_message_arrow {
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+#intro_message_arrow:hover {
+	color: #272727;
+}
+#intro_message_james {
+	position: absolute;
+	left: 25%;
+	top: 45%;
+}
+#conclusion_james {
+	position: absolute;
+	left: 25%;
+	top: 45%;
+}
+#james_level_intro {
+	height: 352px;
+	animation: rotationJames 3s infinite linear;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+#james_level_1 {
+	cursor:default;
+	position: absolute;
+	height: 450px;
+	bottom: 30px;
+	left: 30px;
+	animation: rotationJames 3s infinite linear;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+#james_level_1:hover {
+	height: 460px;
+}
+#james_level_2 {
+	cursor:default;
+	position: absolute;
+	height: 430px;
+	bottom: 30px;
+	left: 30px;
+	animation: rotationJames 3s infinite linear;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+#james_level_2:hover {
+	height: 440px;
+}
+#james_level_3 {
+	cursor:default;
+	position: absolute;
+	height: 430px;
+	bottom: 30px;
+	left: 30px;
+	animation: rotationJames 3s infinite linear;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+#james_level_3:hover {
+	height: 440px;
+}
+#james_conclusion {
+	cursor:default;
+	position: absolute;
+	height: 450px;
+	bottom: 30px;
+	left: 30px;
+	animation: rotationJames 3s infinite linear;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+#james_conclusion:hover {
+	height: 460px;
+}
+#guitar1 {
+	display: block;
+	position: absolute;
+	left: 400px;
+	top: 50px;
+	height: 420px;
+	cursor:pointer;
+	transition-duration: 0.5s;
+}
+#guitar1:hover {
+	height: 450px;
+	left:395px;
+}
+#guitar2 {
+	position: absolute;
+	left: 650px;
+	top: 40px;
+	height: 420px;
+	cursor: pointer;
+	transition-duration: 0.5s;
+}
+#guitar2:hover {
+	height: 450px;
+	left: 645px;
+}
+#guitar3 {
+	position: absolute;
+	left: 900px;
+	top: 65px;
+	height: 420px;
+	cursor:pointer;
+	transition-duration: 0.5s;
+}
+#guitar3:hover {
+	height: 450px;
+	left: 895px;
+}
+#guitar4 {
+	position: absolute;
+	left: 1150px;
+	top: 75px;
+	height: 420px;
+	cursor:pointer;
+	transition-duration: 0.5s;
+}
+#guitar4:hover {
+	height: 450px;
+	left: 1145px;
+}
+#guitar5 {
+	position: absolute;
+	left: 1400px;
+	top: 35px;
+	height: 420px;
+	cursor:pointer;
+	transition-duration: 0.5s;
+}
+#guitar5:hover {
+	height: 450px;
+	left: 1395px;
+}
+#guitar6 {
+	display: block;
+	position: absolute;
+	left: 400px;
+	top: 50px;
+	height: 420px;
+	cursor:pointer;
+	transition-duration: 0.5s;
+}
+#guitar6:hover {
+	height: 450px;
+	left:395px;
+}
+#guitar7 {
+	position: absolute;
+	left: 650px;
+	top: 40px;
+	height: 420px;
+	cursor: pointer;
+	transition-duration: 0.5s;
+}
+#guitar7:hover {
+	height: 450px;
+	left: 645px;
+}
+#guitar8 {
+	position: absolute;
+	left: 900px;
+	top: 65px;
+	height: 420px;
+	cursor:pointer;
+	transition-duration: 0.5s;
+}
+#guitar8:hover {
+	height: 450px;
+	left: 895px;
+}
+#guitar9 {
+	position: absolute;
+	left: 1150px;
+	top: 75px;
+	height: 420px;
+	cursor:pointer;
+	transition-duration: 0.5s;
+}
+#guitar9:hover {
+	height: 450px;
+	left: 1145px;
+}
+#guitar10 {
+	position: absolute;
+	left: 1400px;
+	top: 35px;
+	height: 420px;
+	cursor:pointer;
+	transition-duration: 0.5s;
+}
+#guitar10:hover {
+	height: 450px;
+	left: 1395px;
+}
+#bass1 {
+	display: block;
+	position: absolute;
+	left: 400px;
+	top: 50px;
+	height: 420px;
+	cursor:pointer;
+	transition-duration: 0.5s;
+}
+#bass1:hover {
+	height: 450px;
+	left:395px;
+}
+#bass2 {
+	position: absolute;
+	left: 650px;
+	top: 40px;
+	height: 420px;
+	cursor: pointer;
+	transition-duration: 0.5s;
+}
+#bass2:hover {
+	height: 450px;
+	left: 645px;
+}
+#bass3 {
+	position: absolute;
+	left: 900px;
+	top: 65px;
+	height: 420px;
+	cursor:pointer;
+	transition-duration: 0.5s;
+}
+#bass3:hover {
+	height: 450px;
+	left: 895px;
+}
+#bass4 {
+	position: absolute;
+	left: 1150px;
+	top: 75px;
+	height: 420px;
+	cursor:pointer;
+	transition-duration: 0.5s;
+}
+#bass4:hover {
+	height: 450px;
+	left: 1145px;
+}
+#bass5 {
+	position: absolute;
+	left: 1400px;
+	top: 35px;
+	height: 420px;
+	cursor:pointer;
+	transition-duration: 0.5s;
+}
+#bass5:hover {
+	height: 450px;
+	left: 1395px;
+}
+#inventory_box_level_1 {
+	height: 200px;
+	min-width: 70px;
+	position: absolute;
+	right: 110px;
+	bottom: 30px;
+	border-radius: 25px;
+	box-shadow: 0px 0px 15px #1A1A1A;
+	background-color: white;
+	opacity: 0.8;
+	transition-duration: 0.5s;
+	display: none;
+}
+#inventory_box_level_1:hover {
+	opacity: 1;
+	transition-duration: 0.5s;
+}
+#inventory_box_level_2 {
+	height: 200px;
+	min-width: 70px;
+	position: absolute;
+	right: 110px;
+	bottom: 30px;
+	border-radius: 25px;
+	box-shadow: 0px 0px 15px #1A1A1A;
+	background-color: white;
+	opacity: 0.8;
+	transition-duration: 0.5s;
+	display: none;
+}
+#inventory_box_level_2:hover {
+	opacity: 1;
+	transition-duration: 0.5s;
+}
+#inventory_box_level_3 {
+	height: 200px;
+	min-width: 70px;
+	position: absolute;
+	right: 110px;
+	bottom: 30px;
+	border-radius: 25px;
+	box-shadow: 0px 0px 15px #1A1A1A;
+	background-color: white;
+	opacity: 0.8;
+	transition-duration: 0.5s;
+	display: none;
+}
+#inventory_box_level_3:hover {
+	opacity: 1;
+	transition-duration: 0.5s;
+}
+#inventory_guitar1 {
+	height: 190px;
+	cursor:pointer;
+	float: right;
+	padding: 10px;
+	display: none;
+}
+#inventory_guitar2 {
+	height: 190px;
+	cursor:pointer;
+	float: right;
+	padding: 10px;
+	display: none;
+}
+#inventory_guitar3 {
+	height: 190px;
+	cursor:pointer;
+	float: right;
+	padding: 10px;
+	display: none;
+}
+#inventory_guitar4 {
+	height: 190px;
+	cursor:pointer;
+	float: right;
+	padding: 10px;
+	display: none;
+}
+#inventory_guitar5 {
+	height: 190px;
+	cursor:pointer;
+	float: right;
+	padding: 10px;
+	display: none;
+}
+#inventory_guitar6 {
+	height: 190px;
+	cursor:pointer;
+	float: right;
+	padding: 10px;
+	display: none;
+}
+#inventory_guitar7 {
+	height: 190px;
+	cursor:pointer;
+	float: right;
+	padding: 10px;
+	display: none;
+}
+#inventory_guitar8 {
+	height: 190px;
+	cursor:pointer;
+	float: right;
+	padding: 10px;
+	display: none;
+}
+#inventory_guitar9 {
+	height: 190px;
+	cursor:pointer;
+	float: right;
+	padding: 10px;
+	display: none;
+}
+#inventory_guitar10 {
+	height: 190px;
+	cursor:pointer;
+	float: right;
+	padding: 10px;
+	display: none;
+}
+#inventory_bass1 {
+	height: 190px;
+	cursor:pointer;
+	float: right;
+	padding: 10px;
+	display: none;
+}
+#inventory_bass2 {
+	height: 190px;
+	cursor:pointer;
+	float: right;
+	padding: 10px;
+	display: none;
+}
+#inventory_bass3 {
+	height: 190px;
+	cursor:pointer;
+	float: right;
+	padding: 10px;
+	display: none;
+}
+#inventory_bass4 {
+	height: 190px;
+	cursor:pointer;
+	float: right;
+	padding: 10px;
+	display: none;
+}
+#inventory_bass5 {
+	height: 190px;
+	cursor:pointer;
+	float: right;
+	padding: 10px;
+	display: none;
+}
+#timer_container_level_1 {
+	margin: 0;
+	position: absolute;
+	top: 30px;
+	right: 40px;
+}
+#timer_container_level_2 {
+	margin: 0;
+	position: absolute;
+	top: 30px;
+	right: 40px;
+}
+#timer_container_level_3 {
+	margin: 0;
+	position: absolute;
+	top: 30px;
+	right: 40px;
+}
+#timer_level_1 {
+	display: none;
+	font-family: 'Germania One', cursive;
+	color: red;
+	font-size: 70px;
+	padding-top: 0;
+	margin-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+#timer_level_2 {
+	display: none;
+	font-family: 'Germania One', cursive;
+	color: red;
+	font-size: 70px;
+	padding-top: 0;
+	margin-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+#timer_level_3 {
+	display: none;
+	font-family: 'Germania One', cursive;
+	color: red;
+	font-size: 70px;
+	padding-top: 0;
+	margin-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+#level_transition_1_arrow {
+	display: none;
+	color: yellow;
+}
+#level_transition_2_arrow {
+	display: none;
+	color: yellow;
+}
+#level_transition_3_arrow {
+	display: none;
+	color: yellow;
+}
+#conclusion_reward {
+	position: absolute;
+	height: 100px;
+	top: 55%;
+	right: 25%;
+}
+#conclusion_reward img {
+	height: 100px;
+	display: none;
+	float: right;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
